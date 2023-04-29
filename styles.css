@@ -20,7 +20,8 @@
     display: none;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -53,9 +54,7 @@ main {
     /* temp */
 }
 
-nav.mobile {
-
-}
+nav.mobile {}
 
 .mobile-nav-links {
     display: none;
@@ -65,13 +64,66 @@ nav.mobile:hover .mobile-nav-links {
     display: block;
 }
 
+@media screen and (max-width: 640px) {
+
+    #chat > button {
+        background-color: rgb(255, 117, 5);
+        color: white;
+        /* width:200px; */
+        /* height:200px; */
+        position: fixed;
+        right: 0px;
+        /* margin:0px auto; */
+        /* top:200px; */
+        padding: 10px;
+        /* position: absolute; */
+        top: 50%;
+        border: none;
+
+    }
+}
+
+#chat span {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
+
+
 @media screen and (min-width: 640px) {
     .desktop {
         display: block;
     }
+
     .mobile {
+        display: none;
+    }
+
+    #chat>button {
+
+        /* background-color: red; */
+        position: fixed;
+        background-image: url("images/chat_desktop.png");
+        background-repeat: no-repeat, repeat;
+        width: 100px;
+        height: 80px;
+        right: 0;
+        bottom: 115px;
+        border-radius: 32px;
+        max-width: 370px;
+        /* bottom: 10px;
+        right:100px; */
+        /* bottom:200px; */
+
+        /* color:green; */
+    }
+
+    #chat span {
         display: none;
     }
 }
 
-1-2
+footer {
+    background-color: brown;
+    text-align: center;
+    padding: 10px;
+}
