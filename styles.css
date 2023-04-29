@@ -64,30 +64,53 @@ nav.mobile:hover .mobile-nav-links {
     display: block;
 }
 
-@media screen and (max-width: 640px) {
-
-    #chat > button {
-        background-color: rgb(255, 117, 5);
-        color: white;
-        /* width:200px; */
-        /* height:200px; */
-        position: fixed;
-        right: 0px;
-        /* margin:0px auto; */
-        /* top:200px; */
-        padding: 10px;
-        /* position: absolute; */
-        top: 50%;
-        border: none;
-
-    }
+section.outer {
+    width: 100%;
 }
 
-#chat span {
-    writing-mode: tb-rl;
-    transform: rotate(-180deg);
+section.inner {
+    margin: auto;
+    width: 1200px;
+    max-width: 87%;
 }
 
+.section-1 {
+    background: orange;
+}
+
+#chat {
+    transform: translateX(34%) rotate(-90deg);
+    position: fixed;
+    right: 0px;
+    top: 50%;
+}
+
+#chat > button {
+    cursor: pointer;
+    background-color: rgb(255, 117, 5);
+    color: white;
+    /* width:200px; */
+    /* height:200px; */
+    /* margin:0px auto; */
+    /* top:200px; */
+    padding: 10px;
+    /* position: absolute; */
+    border: none;
+}
+
+.skills {
+
+}
+
+.skills figure {
+    display: inline-block;
+}
+
+footer {
+    background-color: brown;
+    text-align: center;
+    padding: 10px;
+}
 
 @media screen and (min-width: 640px) {
     .desktop {
@@ -98,16 +121,24 @@ nav.mobile:hover .mobile-nav-links {
         display: none;
     }
 
+    section.inner {
+        max-width: 75%;
+    }
+
+    #chat {
+        transform: unset;
+        right: 0;
+        top: unset;
+        bottom: 115px;
+    }
+
     #chat>button {
 
         /* background-color: red; */
-        position: fixed;
         background-image: url("images/chat_desktop.png");
         background-repeat: no-repeat, repeat;
         width: 100px;
         height: 80px;
-        right: 0;
-        bottom: 115px;
         border-radius: 32px;
         max-width: 370px;
         /* bottom: 10px;
@@ -120,10 +151,4 @@ nav.mobile:hover .mobile-nav-links {
     #chat span {
         display: none;
     }
-}
-
-footer {
-    background-color: brown;
-    text-align: center;
-    padding: 10px;
 }
