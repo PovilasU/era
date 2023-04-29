@@ -1,0 +1,77 @@
+/* 
+    box-sizing default is content-box
+        content-box means:
+            when we set the width/height of an element
+            we are setting the width/height of the content ONLY
+        border-box means:
+            we are setting the width/height of the content, padding, AND border all at once
+
+    BOX-MODEL
+        every element has 4 "layers"
+        going from the inside to outside
+        content -> padding -> border -> margin
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.desktop {
+    display: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    /* temporary */
+    background-color: lightblue;
+    /*
+        flex-grow: 1 if allowed to grow, 0 if not
+        flex-shrink: 1 if allowed to shrink, 0 if not
+        flex-basis: width (height if flex-direction: column)
+
+        flex: flex-grow flex-shrink flex-basis;
+    */
+    flex: 0 0 150px;
+}
+
+#wrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+main {
+    /* temp */
+}
+
+nav.mobile {
+
+}
+
+.mobile-nav-links {
+    display: none;
+}
+
+nav.mobile:hover .mobile-nav-links {
+    display: block;
+}
+
+@media screen and (min-width: 640px) {
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+1-2
