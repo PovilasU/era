@@ -20,6 +20,10 @@
     display: none;
 }
 
+html {
+    font-size: 12px;
+}
+
 html,
 body {
     height: 100%;
@@ -30,7 +34,18 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
+
+/* 
+    sans- (without)
+
+    monospace: every character has the same width
+        .W.W
+
+    
+*/
 
 header {
     /* temporary */
@@ -42,7 +57,8 @@ header {
 
         flex: flex-grow flex-shrink flex-basis;
     */
-    flex: 0 0 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 #wrapper {
@@ -54,14 +70,70 @@ main {
     /* temp */
 }
 
-nav.mobile {}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: flex; 
+}
+
+nav.mobile {
+    position: relative;
+}
+
+nav.mobile h3 {
+    margin: 0;
+    padding: 2em;
+}
+
+/*
+    CSS Units
+    `````````
+    %   =   relative to the parent
+    rem =   relative to the root font-size   
+    em  =   relative to the element font-size
+*/
+
 
 .mobile-nav-links {
     display: none;
+    position: absolute;
+
+    background-color: white;
+    outline: 1px solid gray;
+    
+    padding: 2em;
+
+    flex-direction: column;
 }
 
 nav.mobile:hover .mobile-nav-links {
-    display: block;
+    display: flex;
+}
+
+nav.desktop {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.desktop a {
+    display: inline-block;
+    padding: 2em;
+}
+
+nav.desktop a {
+    text-decoration: none;
+    font-weight: 900;
+}
+
+nav.desktop a:hover {
+    background-color: rgba(0, 0, 0, .1);
 }
 
 section.outer {
