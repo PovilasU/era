@@ -215,6 +215,7 @@ footer {
         height: 100px;
         border-radius: 32px;
         max-width: 370px;
+        background-color: unset;
     }
 
     #chatButtonId span {
