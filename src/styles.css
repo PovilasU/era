@@ -209,11 +209,11 @@ footer {
 
     /* #chat>button { */
     #chatButtonId .chat-button {
-        background-image: url("images/chat_desktop1.png");
+        background-image: url("images/chat_desktop100x107.png");
         background-repeat: no-repeat, repeat;
         width: 100px;
-        height: 100px;
-        border-radius: 32px;
+        height: 107px;
+        /* border-radius: 32px; */
         max-width: 370px;
         background-color: unset;
     }
