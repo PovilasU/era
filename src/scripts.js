@@ -27,15 +27,15 @@ const openChat = () => {
 }
 
 let elemDiv = document.createElement("div");
-elemDiv.id = "chat";
+elemDiv.id = "chatButtonId";
 let buttonEl = document.createElement("button");
 let buttonTextEl = document.createElement("span");
 buttonTextEl.innerText = "Chat with us";
-buttonEl.id="chatBtnId";
+buttonEl.className="chat-button";
 buttonEl.appendChild(buttonTextEl);
 elemDiv.appendChild(buttonEl);
 document.body.appendChild(elemDiv);
-const chatButton = document.querySelector("#chatBtnId");
+const chatButton = document.querySelector("chat-button");
 chatButton.addEventListener("click", openChat);
 
 

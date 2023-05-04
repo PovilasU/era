@@ -150,26 +150,6 @@ section.inner {
     background: orange;
 }
 
-#chat {
-    transform: translateX(34%) rotate(-90deg);
-    position: fixed;
-    right: 0px;
-    top: 50%;
-}
-
-#chat > button {
-    cursor: pointer;
-    background-color: rgb(255, 117, 5);
-    color: white;
-    /* width:200px; */
-    /* height:200px; */
-    /* margin:0px auto; */
-    /* top:200px; */
-    padding: 10px;
-    /* position: absolute; */
-    border: none;
-}
-
 .skills {
 
 }
@@ -184,6 +164,29 @@ footer {
     padding: 10px;
 }
 
+#chatButtonId {
+    transform: translateX(34%) rotate(-90deg);
+    position: fixed;
+    right: 0px;
+    top: 50%;
+}
+
+#chatButtonId > button {
+    cursor: pointer;
+    background-color: rgb(255, 117, 5);
+    color: white;
+    /* width:200px; */
+    /* height:200px; */
+    /* margin:0px auto; */
+    /* top:200px; */
+    padding: 10px;
+    /* position: absolute; */
+    border: none;
+}
+
+
+/*  */
+
 @media screen and (min-width: 640px) {
     .desktop {
         display: block;
@@ -197,30 +200,24 @@ footer {
         max-width: 75%;
     }
 
-    #chat {
+    #chatButtonId {
         transform: unset;
         right: 0;
         top: unset;
         bottom: 115px;
     }
 
-    #chat>button {
-
-        /* background-color: red; */
+    /* #chat>button { */
+    #chatButtonId .chat-button {
         background-image: url("images/chat_desktop1.png");
         background-repeat: no-repeat, repeat;
         width: 100px;
         height: 100px;
         border-radius: 32px;
         max-width: 370px;
-        /* bottom: 10px;
-        right:100px; */
-        /* bottom:200px; */
-
-        /* color:green; */
     }
 
-    #chat span {
+    #chatButtonId span {
         display: none;
     }
 }
