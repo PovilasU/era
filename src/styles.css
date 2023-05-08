@@ -64,6 +64,18 @@ header {
 #wrapper {
     flex-grow: 1;
     overflow-y: auto;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+button {
+    /* cursor: pointer; */
 }
 
 main {
@@ -164,14 +176,16 @@ footer {
     padding: 10px;
 }
 
-#chatButtonId {
+
+/* Chat icon styles starts */
+
+#chatButtonIdOld {
     transform: translateX(34%) rotate(-90deg);
     position: fixed;
     right: 0px;
     top: 50%;
 }
-
-#chatButtonId > button {
+#chatButtonIdOld > button {
     cursor: pointer;
     background-color: rgb(255, 117, 5);
     color: white;
@@ -183,9 +197,88 @@ footer {
     /* position: absolute; */
     border: none;
 }
+#chatButtonId {
+    transform: translateX(38%) rotate(-90deg);
+    position: fixed;
+    right: 0;
+    top: 50%;
+
+    /*
+        block: takes up the whole width of the parent by default and forces the next element to go on a new line
+
+        inline: only takes up the space its content requires, cannot be resized
+
+        inline-block: can be resized, but does not force a new line
+    */
+
+    /* display: block; */
+    /* position: fixed; */
+    /* bottom: 115px; */
+    /* right: -20px; */
+    /* height: 80px; */
+    max-width: 370px;
+    z-index: 650;
+    /* border-radius: 32px; */
+    /* font-family: Allente Sans, Tahoma, Verdana, sans-serif;
+    -webkit-text-size-adjust: 100%; */
+    /* 
+     */
+     /* border-style: solid; */
+     border-left: solid;
+     border-right: solid;
+     border-top: solid;
+     border-color: red;
+}
+
+.chat-button, .chat-button-desktop {
+    cursor: pointer;
+}
+
+/*
+    CSS Combinators
+        +           adjacent sibling
+        ~           general sibling
+        >           child
+        [space]     descendant
+*/
+
+/* #chatButtonId > button {
+    cursor: pointer;
+} */
+
+#chatButtonId .chat-button {
+    /* cursor: pointer;
+    background-color: rgb(255, 117, 5);
+    color: white;
+    padding: 10px;
+    border: none; */
+
+    display: block;
+    padding: 10px;
 
 
-/*  */
+    height: 100%;
+    width: 100%;
+    color: salmon;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    overflow: visible;
+    cursor: pointer;
+    /* background-image: url(/Content/Icons/Alli_1_anim_desktop_100x80.png);
+    background-repeat: no-repeat; */
+    background-size: 80px 64px;
+    /* padding: 0 0 0 25px; */
+}
+
+
+/*  Desktop view*/
 
 @media screen and (min-width: 640px) {
     .desktop {
@@ -204,21 +297,30 @@ footer {
         transform: unset;
         right: 0;
         top: unset;
-        bottom: 115px;
-    }
-
-    /* #chat>button { */
-    #chatButtonId .chat-button {
-        background-image: url("images/chat_desktop100x107.png");
-        background-repeat: no-repeat, repeat;
-        width: 100px;
-        height: 107px;
-        /* border-radius: 32px; */
-        max-width: 370px;
-        background-color: unset;
+        bottom: 33px;
+        border: 0;
+        
     }
 
     #chatButtonId span {
         display: none;
     }
+    
+    #chatButtonId .chat-button {
+        /* background-image: url("images/chat_desktop100x107.png");
+        background-repeat: no-repeat, repeat; */
+        /* width: 100px;
+        height: 107px; */
+        /* border-radius: 32px; */
+        max-width: 370px;
+        background-color: unset;
+        border: unset;
+    }
+
+    .chat-button-desktop {
+        border: 0;
+        background: none;
+    }
 }
+
+/* Chat icon styles ends */

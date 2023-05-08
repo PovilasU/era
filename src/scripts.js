@@ -31,14 +31,24 @@ elemDiv.id = "chatButtonId";
 let buttonEl = document.createElement("button");
 let buttonTextEl = document.createElement("span");
 buttonTextEl.innerText = "Chat with us";
-buttonEl.className="chat-button";
+buttonEl.classList.add("chat-button");
+buttonEl.classList.add("mobile");
+
+let imgBtn = document.createElement('button')
+imgBtn.classList.add('desktop')
+imgBtn.classList.add('chat-button-desktop')
+let chatImg = document.createElement('img')
+chatImg.src = './images/chat_desktop100x107_2.png'
+imgBtn.appendChild(chatImg)
+
+elemDiv.appendChild(imgBtn)
+
 buttonEl.appendChild(buttonTextEl);
 elemDiv.appendChild(buttonEl);
 document.body.appendChild(elemDiv);
-const chatButton = document.querySelector("chat-button");
+const chatButton = document.querySelector(".chat-button");
 chatButton.addEventListener("click", openChat);
-
-
+imgBtn.addEventListener("click", openChat);
 
 
 //TODO: write function to close chat
